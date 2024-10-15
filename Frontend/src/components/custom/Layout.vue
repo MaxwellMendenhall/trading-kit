@@ -106,7 +106,7 @@
 
                 <HoverCard>
                     <HoverCardTrigger>
-                        <a href="https://linkedin.com" target="_blank">
+                        <a href="https://www.linkedin.com/in/maxwell-mendenhall-317ba61b6/" target="_blank">
                             <Linkedin class="w-6 h-6 text-white-500 hover:text-gray-900 cursor-pointer" />
                         </a>
                     </HoverCardTrigger>
@@ -117,7 +117,7 @@
 
                 <HoverCard>
                     <HoverCardTrigger>
-                        <a href="https://www.buymeacoffee.com" target="_blank">
+                        <a href="https://www.buymeacoffee.com/maxwell_mendenhall" target="_blank">
                             <Coffee class="w-6 h-6 text-white-500 hover:text-gray-900 cursor-pointer" />
                         </a>
                     </HoverCardTrigger>
