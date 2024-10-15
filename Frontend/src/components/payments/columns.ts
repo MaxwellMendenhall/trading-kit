@@ -19,6 +19,13 @@ const greaterThanOrEqualFilter = (row: any, columnId: any, filterValue: any) => 
   return rowValue >= filterNumber
 }
 
+const lessThanOrEqualFilter = (row: any, columnId: any, filterValue: any) => {
+  const rowValue = row.getValue(columnId)
+  const filterNumber = Number(filterValue)
+  return rowValue <= filterNumber
+}
+
+
 // Define the columns
 export const columns: ColumnDef<TradingData>[] = [
   {
@@ -69,7 +76,7 @@ export const columns: ColumnDef<TradingData>[] = [
 
       return h('div', { class: 'text-right font-medium' }, formatted)
     },
-    filterFn: greaterThanOrEqualFilter,
+    filterFn: lessThanOrEqualFilter,
   },
   {
     accessorKey: 'num_trades',
@@ -78,7 +85,7 @@ export const columns: ColumnDef<TradingData>[] = [
       const numTrades = row.getValue('num_trades') as number  // Cast to number
       return h('div', { class: 'text-right font-medium' }, numTrades)
     },
-    filterFn: greaterThanOrEqualFilter,
+    filterFn: lessThanOrEqualFilter,
   },
   {
     accessorKey: 'percent_profitable',

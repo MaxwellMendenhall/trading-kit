@@ -66,7 +66,7 @@ const table = useVueTable({
                 @update:model-value="table.getColumn('max_drawdown')?.setFilterValue($event)" />
 
             <!-- Num Trade Filter -->
-            <Input class="w-32" placeholder="Filter Max Drawdown..."
+            <Input class="w-32" placeholder="Filter # of Trades..."
                 :model-value="table.getColumn('num_trades')?.getFilterValue() as string"
                 @update:model-value="table.getColumn('num_trades')?.setFilterValue($event)" />
         </div>
