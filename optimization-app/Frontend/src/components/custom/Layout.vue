@@ -186,6 +186,7 @@ import {
     DrawerTitle,
     DrawerTrigger,
 } from '@/components/ui/drawer'
+import axios from 'axios';
 
 export default defineComponent({
     name: 'Layout',
@@ -263,45 +264,42 @@ export default defineComponent({
         const onSubmit = form.handleSubmit(async (values) => {
             try {
                 console.log(values);
-
+        
                 const formData = new FormData();
-
-                values.files.forEach((fileWrapper, _) => {
+        
+                values.files.forEach((fileWrapper) => {
                     if (fileWrapper.file) {
                         formData.append('files', fileWrapper.file);
                     }
                 });
-
-                const response = await fetch(backend + '/submit', {
-                    method: 'POST',
-                    body: formData
+        
+                // Axios request
+                const response = await axios.post(`${backend}/submit`, formData, {
+                    headers: {
+                        'Content-Type': 'multipart/form-data',
+                    },
                 });
-
-                if (response.ok) {
+        
+                if (response.status === 200) {
                     form.resetForm();
-                    const responseData = await response.json();
+                    const responseData = response.data; // Axios automatically parses JSON
                     data.value = responseData.data;
-
-                    console.log(responseData.data)
+        
+                    console.log(responseData.data);
                     toast({
                         title: 'Success!',
                         description: 'Files combined & ready!',
                     });
                 }
-
+        
             } catch (error) {
-                if (error instanceof Error) {
-                    toast({
-                        title: 'Error!',
-                        description: `Posting error. ${error}`,
-                    });
-                }
+                const errorMessage = error.response?.data?.message || error.message || 'Unknown error';
                 toast({
                     title: 'Error!',
-                    description: `Posting error. ${error}`,
+                    description: `Posting error. ${errorMessage}`,
                 });
             }
-        })
+        });
 
         const clearAllFiles = () => {
             inputs.value = inputs.value.map(() => ({ value: '' }))
