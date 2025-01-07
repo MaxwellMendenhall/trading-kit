@@ -272,8 +272,7 @@ export default defineComponent({
                     }
                 });
 
-                const url = backend + "/submit";
-                const endpoint = url
+                const endpoint = "https://" + backend + "/submit";
                 const response = await fetch(endpoint, {
                     method: 'POST',
                     body: formData
