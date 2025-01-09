@@ -9,6 +9,7 @@ All these bots/strats/algos are developed in C# for Ninja Trader. I provided the
 # Stratigies/Bots/Algorithms:
 - TrendAholic (Uploaded 1/6/25)
 - RobStratSync (Uploaded 1/8/25)
+- PivotStrength (Uploaded 1/8/25)
 
 
 ## TrendAholic
@@ -20,3 +21,8 @@ All these bots/strats/algos are developed in C# for Ninja Trader. I provided the
 ### 15 Min
 ![Backtest Results](./imgs/RobStratSync15Min.PNG)
 [Template File Here](./templates/MaxBots.RobStratSync/15%20Min.xml)
+
+## PivotStrength
+### 15 Min (M2K)
+![Backtest Results](./imgs/PivotStrength15Min.PNG)
+[Template File Here](./templates/MaxBots.PivotStrength/15Min.xml)
