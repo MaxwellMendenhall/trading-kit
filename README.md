@@ -10,6 +10,7 @@ All these bots/strats/algos are developed in C# for Ninja Trader. I provided the
 - TrendAholic (Uploaded 1/6/25)
 - RobStratSync (Uploaded 1/8/25)
 - PivotStrength (Uploaded 1/8/25)
+- BollingerEma (Uploaded 1/28/25)
 
 
 ## TrendAholic
@@ -26,3 +27,8 @@ All these bots/strats/algos are developed in C# for Ninja Trader. I provided the
 ### 15 Min (M2K)
 ![Backtest Results](./imgs/PivotStrength15Min.PNG)
 [Template File Here](./templates/MaxBots.PivotStrength/15Min.xml)
+
+## BollingerEma
+### 5 Min (NQ)
+![Backtest Results](./imgs/BollingerEma5Min.PNG)
+[Template File Here](./templates/MaxBots.BollingerEma//Best%205%20Min%20No%20Profit%20Target.xml)
