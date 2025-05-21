@@ -10,6 +10,4 @@ This Optimization App simplifies the process by consolidating all of your export
 
 With this app, you gain more control over your optimization results, making it easier to identify the best parameters for your trading strategies.
 
-You can access the live, up-to-date app here: [App](https://ninja-trader-binder-production.up.railway.app)
-
 ## 
